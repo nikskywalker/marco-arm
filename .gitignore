@@ -1,0 +1,14 @@
+# third-party models: not used, not redistributed
+cad/vendor/
+__pycache__/
+
+media/raw/
+
+# local notes, not published
+docs/
+cad/ASSEMBLY.md
+cad/README.md
+cad/img/
+
+# local files, not published
+attic/
