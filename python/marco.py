@@ -16,21 +16,21 @@ DEFAULT_PORT = "COM3"
 CHANNELS = {"base": 0, "shoulder": 1, "elbow": 2, "wrist": 3, "gripper": 4}
 
 # Servo command range accepted by the firmware (ANGLE_MIN / ANGLE_MAX in pca_serial), degrees.
-LIMITS = {"base": (45, 135), "shoulder": (10, 170), "elbow": (10, 170), "wrist": (40, 110), "gripper": (30, 150)}
+LIMITS = {"base": (40, 140), "shoulder": (10, 170), "elbow": (10, 170), "wrist": (40, 110), "gripper": (30, 150)}
 
 # Neutral pose set by the firmware at power-up (NEUTRAL in pca_serial), servo commands.
-NEUTRAL = {"base": 90, "shoulder": 130, "elbow": 90, "wrist": 90, "gripper": 90}
+NEUTRAL = {"base": 90, "shoulder": 130, "elbow": 165, "wrist": 54, "gripper": 90}
 
 # Calibration measured on the arm: real joint angle = slope * command + offset (degrees).
 #   base      yaw, counterclockwise seen from above, 0 at command 90
 #   shoulder  link 1 from the table
 #   elbow     forearm from link 1 (0 = in line), valid with the forearm in front of vertical
-#   wrist     gripper from forearm (0 = in line), about +-2 deg
+#   wrist     gripper from forearm (0 = in line)
 CALIBRATION = {
     "base": (0.754, -67.86),
     "shoulder": (0.865, -30.1),
-    "elbow": (0.948, -89.3),
-    "wrist": (-1.00, 83.6),
+    "elbow": (0.836, -143.0),
+    "wrist": (-0.910, 49.4),
 }
 
 
